@@ -6,6 +6,8 @@ on:
       - main
     paths:
       - "art-app/**"
+  workflow_dispatch:
+  
 
 jobs:
   build:
