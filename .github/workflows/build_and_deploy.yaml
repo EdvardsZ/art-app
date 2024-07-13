@@ -30,6 +30,12 @@ jobs:
       run: npm run build
       working-directory: art-app
 
+    - name: Set git config
+      run: |
+        git config --global user.email "github-actions[bot]@users.noreply.github.com"
+        git config --global user.name "github-actions[bot]"
+      working-directory: art-app
+
     - name: Deploy to gh pages
       run: |
         npx angular-cli-ghpages --dir=dist/art-app --no-silent
