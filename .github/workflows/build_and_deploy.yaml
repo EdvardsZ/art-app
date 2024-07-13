@@ -6,6 +6,7 @@ on:
       - main
     paths:
       - "art-app/**"
+      - ".github/workflows/build_and_deploy.yaml"
   workflow_dispatch:
 
 
