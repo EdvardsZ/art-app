@@ -21,9 +21,11 @@ jobs:
 
     - name: Install Dependencies
       run: npm install
+      working-directory: art-app
 
     - name: Build Angular App
       run: npm run build
+      working-directory: art-app
 
     - name: Deploy to gh pages
       run: |
@@ -31,3 +33,4 @@ jobs:
       env:
         CI: true
         GH_TOKEN: ${{ secrets.GH_TOKEN }}
+      working-directory: art-app
