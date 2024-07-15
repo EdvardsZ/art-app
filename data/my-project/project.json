@@ -1,0 +1,4 @@
+{
+    "images" : [ "image1.jpeg", "image2.png", "image3.png" ],
+    "text": ["Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras bibendum auctor est et lobortis. Vivamus id euismod nulla. Proin venenatis, nibh eu varius vestibulum, mauris justo suscipit lorem, et posuere magna dui ultrices massa. Morbi luctus ligula dictum dolor pharetra laoreet. Integer in massa condimentum nibh placerat cursus a a nisl. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin ut justo pellentesque, luctus elit sit amet, molestie justo. Sed luctus bibendum risus et congue. Proin consectetur mauris suscipit dui laoreet, a interdum metus rhoncus. "]
+}
