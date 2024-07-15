@@ -8,11 +8,13 @@
     {
         "folder" : "my-second-project",
         "name" : "My second project",
-        "short_description" : "This is my second project"
+        "short_description" : "This is my second project",
+        "icon" : "icon.jpeg"
     },
     {
         "folder" : "my-third-project",
         "name" : "My third project",
-        "short_description" : "This is my third project"
+        "short_description" : "This is my third project",
+        "icon" : "icon.jpeg"
     }
 ]
