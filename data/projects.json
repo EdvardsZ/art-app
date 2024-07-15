@@ -1,19 +1,19 @@
 [
     {
         "folder" : "my-project",
-        "name" : "My project",
+        "title" : "My project",
         "short_description" : "This is my project",
         "icon" : "icon.jpeg"
     },
     {
         "folder" : "my-second-project",
-        "name" : "My second project",
+        "title" : "My second project",
         "short_description" : "This is my second project",
         "icon" : "icon.jpeg"
     },
     {
         "folder" : "my-third-project",
-        "name" : "My third project",
+        "title" : "My third project",
         "short_description" : "This is my third project",
         "icon" : "icon.jpeg"
     }
