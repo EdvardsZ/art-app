@@ -11,6 +11,6 @@ export class GithubServiceService {
   constructor(private http: HttpClient) { }
 
   getProjectsJSON() {
-    return this.http.get<Project>(this.REPO_URL + 'data/projects.json')
+    return this.http.get<Project[]>(this.REPO_URL + 'data/projects.json')
   }
 }

@@ -7,7 +7,9 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { GithubServiceService } from './github-service.service';
-import { provideHttpClient } from '@angular/common/http';
+import { Project } from './project.model';
+import {MatCardModule} from '@angular/material/card';
+
 
 
 @Component({
@@ -21,18 +23,19 @@ import { provideHttpClient } from '@angular/common/http';
 
     MatToolbarModule,
     MatButtonModule,
-    MatIconModule
-    
+    MatIconModule,
+    MatCardModule
+
   ],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
 export class AppComponent {
   title = 'art-app';
+  projects: Project[] = [];
 
   constructor(private githubService: GithubServiceService) {
-    this.githubService.getProjectsJSON().subscribe((data) => {
-      console.log(data);
-    });
   }
+
+
 }

@@ -1,6 +1,6 @@
 export class Project {
     folder!: string;
     title!: string;
-    description!: string;
+    short_description!: string;
     icon!: string;
 }
