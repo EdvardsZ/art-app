@@ -5,6 +5,9 @@ import { RouterLink } from '@angular/router';
 import { RouterLinkActive } from '@angular/router';
 import {MatToolbarModule} from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
+import { MatIconModule } from '@angular/material/icon';
+import { GithubServiceService } from './github-service.service';
+import { provideHttpClient } from '@angular/common/http';
 
 
 @Component({
@@ -17,7 +20,8 @@ import { MatButtonModule } from '@angular/material/button';
     RouterLinkActive,
 
     MatToolbarModule,
-    MatButtonModule
+    MatButtonModule,
+    MatIconModule
     
   ],
   templateUrl: './app.component.html',
@@ -25,4 +29,10 @@ import { MatButtonModule } from '@angular/material/button';
 })
 export class AppComponent {
   title = 'art-app';
+
+  constructor(private githubService: GithubServiceService) {
+    this.githubService.getProjectsJSON().subscribe((data) => {
+      console.log(data);
+    });
+  }
 }
