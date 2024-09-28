@@ -1,0 +1,15 @@
+[
+    {
+        "image_name" : "image_0.png",
+        "title" : "The title goes here",
+        "size" : "20 x 20",
+        "type" : "Canvas"
+    },
+    {
+        "image_name" : "image_1.png",
+        "title" : "The title goes here",
+        "size" : "20 x 20",
+        "type" : "Canvas"
+    }
+]
+

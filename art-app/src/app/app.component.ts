@@ -9,6 +9,8 @@ import { MatIconModule } from '@angular/material/icon';
 import { GithubServiceService } from './github-service.service';
 import { Project } from './project.model';
 import {MatCardModule} from '@angular/material/card';
+import {MatSidenavModule} from '@angular/material/sidenav'
+import { FooterComponent } from './footer/footer.component';
 
 
 
@@ -24,7 +26,10 @@ import {MatCardModule} from '@angular/material/card';
     MatToolbarModule,
     MatButtonModule,
     MatIconModule,
-    MatCardModule
+    MatCardModule,
+    MatSidenavModule,
+
+    FooterComponent
 
   ],
   templateUrl: './app.component.html',
@@ -35,6 +40,9 @@ export class AppComponent {
   projects: Project[] = [];
 
   constructor(private githubService: GithubServiceService) {
+    this.githubService.getProjectsJSON().subscribe( res =>{
+      this.projects = res;
+    })
   }
 
 

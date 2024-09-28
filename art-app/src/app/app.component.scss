@@ -1,5 +1,41 @@
 @use '@angular/material' as mat;
 
+mat-sidenav {
+    width: 500px;
+}
+.sidebar-content{
+    margin-left: 110px;
+    margin-right: 110px;
+    margin-top: 60px;
+}
+
+mat-button {
+    color: black;
+}
+
+
+.page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Full height of the viewport */
+  }
+  
+  .example-container {
+    flex: 1; /* Grow the main content as needed */
+    display: flex;
+    flex-direction: column;
+    width: 100%; /* Ensure the content container takes up the full width */
+  }
+  
+  .footer {
+    background-color: #f1f1f1;
+    padding: 10px;
+    text-align: center;
+    width: 100%; /* Make sure the footer takes up the full width of the container */
+    margin-top: auto; /* Push the footer to the bottom */
+    box-sizing: border-box; /* Ensures padding is included within the width */
+  }
+
 // $light-theme: mat.define-theme();
 // $toolbar-theme: mat.define-theme((
 //   color: (

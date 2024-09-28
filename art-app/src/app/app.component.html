@@ -1,9 +1,24 @@
-
-<mat-toolbar color="secondary" >
-  <span>Madara Freidenfelde</span>
-  <a mat-button routerLink="/home" routerLinkActive="active" ariaCurrentWhenActive="page"><mat-icon color="primary">home</mat-icon>Home</a>
-  <a mat-button routerLink="/contacts" routerLinkActive="active" ariaCurrentWhenActive="page">Contacts</a>
-</mat-toolbar>
-
-<!-- The routed views render in the <router-outlet>-->
-<router-outlet></router-outlet>
+<div class="page-container">
+  <mat-sidenav-container class="example-container">
+    <mat-sidenav mode="side" opened>
+      <div class="sidebar-content">
+        <h5 routerLink="/home">Madara Freidenfelde</h5>
+        
+        @for (project of projects; track project)
+        {
+          <div>
+            <a mat-button routerLink="/contacts" routerLinkActive="active" ariaCurrentWhenActive="page">{{project.title}}</a>
+          </div>
+        }
+        <div>
+          <a mat-button routerLink="/contacts" routerLinkActive="active" ariaCurrentWhenActive="page">Contacts</a>
+        </div>
+      </div>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+  
+  <app-footer class="footer"></app-footer>
+</div>
