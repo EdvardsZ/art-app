@@ -26,6 +26,12 @@ jobs:
       run: npm install
       working-directory: art-app
 
+    # replace href="/" with href="/art-app/" in art-app/src/index.html
+    - name: Replace href
+      run: |
+        sed -i 's/href="\//href="\/art-app\//g' art-app/src/index.html
+      working-directory: art-app
+
     - name: Build Angular App
       run: npm run build
       working-directory: art-app
