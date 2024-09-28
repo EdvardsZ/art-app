@@ -1,20 +1,26 @@
 [
     {
-        "folder" : "my-project",
-        "title" : "My project",
-        "short_description" : "This is my project",
-        "icon" : "icon.jpeg"
+        "folder" : "around-the-world",
+        "title" : "Around the world"
     },
     {
-        "folder" : "my-second-project",
-        "title" : "My second project",
-        "short_description" : "This is my second project",
-        "icon" : "icon.jpeg"
+        "folder" : "harvest",
+        "title" : "Harvest"
     },
     {
-        "folder" : "my-third-project",
-        "title" : "My third project",
-        "short_description" : "This is my third project",
-        "icon" : "icon.jpeg"
+        "folder" : "still-life",
+        "title" : "Still life"
+    },
+    {
+        "folder" : "paintings",
+        "title" : "Paintings"
+    },
+    {
+        "folder": "collection-1",
+        "title" : "Collection Name"
+    },
+    {
+        "folder": "collection-2",
+        "title": "Collection Name"
     }
 ]
