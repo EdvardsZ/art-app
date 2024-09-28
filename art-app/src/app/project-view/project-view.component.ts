@@ -12,7 +12,13 @@ export class ProjectViewComponent {
   project_folder: string = '';
   constructor(private route: ActivatedRoute){
     this.route.params.subscribe( params => {
-      console.log(params['id']);
+      const id = params['id'];
+      if (id) {
+        this.project_folder = id;
+      }
+      else {
+        this.project_folder = '';
+      }
     });
   }
 }
