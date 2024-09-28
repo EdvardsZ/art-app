@@ -11,8 +11,8 @@ import { GithubServiceService } from '../github-service.service';
   styleUrl: './project-view.component.scss'
 })
 export class ProjectViewComponent {
-  project_folder: string = '';
-  project_images: ProjectImage[] = [];
+  projectFolder: string = '';
+  projectImages: ProjectImage[] = [];
   constructor(
     private route: ActivatedRoute,
     private githubService: GithubServiceService
@@ -20,12 +20,12 @@ export class ProjectViewComponent {
     this.route.params.subscribe( params => {
       const id = params['id'];
       if (id) {
-        this.project_folder = id;
+        this.projectFolder = id;
       }
       else {
-        this.project_folder = '';
+        this.projectFolder = '';
       }
-      this.getProjectData(this.project_folder);
+      this.getProjectData(this.projectFolder);
     });
   }
 
@@ -34,8 +34,9 @@ export class ProjectViewComponent {
 
   getProjectData(project_folder: string) {
     this.githubService.getProjectData(project_folder).subscribe( (res) => {
-        this.project_images = res;
-        console.log(this.project_images);
+        this.projectImages = res;
+        console.log(this.projectImages);
+        console.log(this.projectImages[0]);
       },
       (err) => {
         console.log("No project data found for " + project_folder);

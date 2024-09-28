@@ -1,3 +1,10 @@
-<p>project-view works! project-folder {{project_folder}}</p>
+<p>project-view works! project-folder {{projectFolder}}</p>
+
+@for (imageData of projectImages; track imageData)
+{
+    <div class="project-image">
+        <img mat-card-image src="https://github.com/EdvardsZ/art-app/blob/main/data/{{projectFolder}}/{{imageData.imageName}}?raw=true" width="400px">
+    </div>
+}
 
 
