@@ -7,7 +7,8 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { GithubServiceService } from './github-service.service';
-import { Project } from './project.model';
+import { Project } from './project.interface';
+
 import {MatCardModule} from '@angular/material/card';
 import {MatSidenavModule} from '@angular/material/sidenav'
 import { FooterComponent } from './footer/footer.component';
