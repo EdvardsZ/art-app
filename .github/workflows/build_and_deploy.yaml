@@ -29,7 +29,7 @@ jobs:
     # replace href="/" with href="/art-app/" in art-app/src/index.html
     - name: Replace href
       run: |
-        sed -i 's/href="\//href="\/art-app\//g' art-app/src/index.html
+        sed -i 's/href="\//href="\/art-app\//g' src/index.html
       working-directory: art-app
 
     - name: Build Angular App
