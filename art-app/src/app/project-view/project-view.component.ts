@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-project-view',
@@ -8,5 +9,10 @@ import { Component } from '@angular/core';
   styleUrl: './project-view.component.scss'
 })
 export class ProjectViewComponent {
-
+  project_folder: string = '';
+  constructor(private route: ActivatedRoute){
+    this.route.params.subscribe( params => {
+      console.log(params['id']);
+    });
+  }
 }
