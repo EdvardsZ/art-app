@@ -5,12 +5,11 @@ import { ProjectViewComponent } from './project-view/project-view.component';
 
 export const routes: Routes = [
     { path: '', redirectTo: 'home', pathMatch: 'full' },
-    { path: 'home', component: HomeComponent },
-    { path: 'contacts', component: ContactsComponent },
-    // project path with the id of the project
+    { path: 'home', component: ProjectViewComponent },
     { path: 'project/:id', component: ProjectViewComponent },
+    { path: 'contacts', component: ContactsComponent }
     // if the path is not found, redirect to home
-    { path: '**', redirectTo: 'home' }
+    //{ path: '**', redirectTo: 'home' }
   ];
 
 

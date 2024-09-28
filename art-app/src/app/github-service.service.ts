@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { HttpClient } from '@angular/common/http';
 import { Project } from './project.interface';
+import { ProjectData } from './project-data.interface';
 @Injectable({
   providedIn: 'root'
 })
@@ -12,5 +13,9 @@ export class GithubServiceService {
 
   getProjectsJSON() {
     return this.http.get<Project[]>(this.REPO_URL + 'data/projects.json')
+  }
+
+  getProjectData(project_folder: string) {
+    return this.http.get<ProjectData>(this.REPO_URL + 'data/' + project_folder + '/project_data.json')
   }
 }

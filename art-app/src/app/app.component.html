@@ -7,7 +7,7 @@
         @for (project of projects; track project)
         {
           <div>
-            <a mat-button routerLink="/contacts" routerLinkActive="active" ariaCurrentWhenActive="page">{{project.title}}</a>
+            <a mat-button [routerLink]="['/project', project.folder]" routerLinkActive="active" ariaCurrentWhenActive="page">{{project.title}}</a>
           </div>
         }
         <div>
