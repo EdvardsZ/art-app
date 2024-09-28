@@ -25,17 +25,23 @@ export class ProjectViewComponent {
       else {
         this.project_folder = '';
       }
+      this.getProjectData(this.project_folder);
     });
-
-    this.githubService.getProjectData(this.project_folder).subscribe( (res) => {
-      this.project_images = res;
-      console.log(this.project_images);
-    },
-    (err) => {
-      console.log("No project data found for " + this.project_folder);
-      console.log("Loading default view");
-    }
-
-  );
   }
+
+
+
+
+  getProjectData(project_folder: string) {
+    this.githubService.getProjectData(project_folder).subscribe( (res) => {
+        this.project_images = res;
+        console.log(this.project_images);
+      },
+      (err) => {
+        console.log("No project data found for " + project_folder);
+        console.log("Loading default view");
+      }
+    );
+  }
+
 }
