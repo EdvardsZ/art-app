@@ -1,18 +1,18 @@
 [
     {
-        "image_name" : "image1.jpeg",
+        "imageName" : "image1.jpeg",
         "title" : "The title goes here",
         "size" : "20 x 20",
         "type" : "Canvas"
     },
     {
-        "image_name" : "image2.png",
+        "imageName" : "image2.png",
         "title" : "The title goes here",
         "size" : "20 x 20",
         "type" : "Canvas"
     },
     {
-        "image_name" : "image3.png",
+        "imageName" : "image3.png",
         "title" : "The title goes here",
         "size" : "20 x 20",
         "type" : "Canvas"
