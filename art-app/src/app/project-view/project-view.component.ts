@@ -23,7 +23,7 @@ export class ProjectViewComponent {
         this.projectFolder = id;
       }
       else {
-        this.projectFolder = '';
+        this.projectFolder = 'home';
       }
       this.getProjectData(this.projectFolder);
     });
