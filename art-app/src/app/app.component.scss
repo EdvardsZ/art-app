@@ -1,40 +1,85 @@
-@use '@angular/material' as mat;
+@use "@angular/material" as mat;
 
 mat-sidenav {
-    width: 500px;
+  width: 30%;
 }
-.sidebar-content{
-    margin-left: 110px;
-    margin-right: 110px;
-    margin-top: 60px;
+.sidebar-content {
+  margin-left: 30%;
+  margin-top: 20%;
+  font-family: "Lato";
+}
+.sidebar-content div {
+  font-size: 16px;
+  margin-top: 12px;
+}
+
+.sidebar-content a {
+  text-decoration: none;
+  color: #343434;
+  opacity: 63%;
+}
+
+.sidebar-content a:hover {
+  color: #000000;
+  opacity: 80%;
+}
+
+.sidebar-content a.active {
+  color: #000000;
+  opacity: 100%;
+}
+
+.sidebar-content h5 {
+  margin-bottom: 25%;
+  font-family: "Arsenal", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 2rem;
+}
+
+.sidebar-content h6 {
+  opacity: 63%;
+  color: #343434;
+  font-size: 16px;
+  margin-bottom: 0;
+  text-transform: uppercase;
+  font-family: "Lato";
+}
+.sidebar-content .contacts {
+  text-transform: uppercase;
+  margin-top: 25%;
 }
 
 mat-button {
-    color: black;
+  color: black;
 }
 
-
 .page-container {
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* Full height of the viewport */
-  }
-  
-  .example-container {
-    flex: 1; /* Grow the main content as needed */
-    display: flex;
-    flex-direction: column;
-    width: 100%; /* Ensure the content container takes up the full width */
-  }
-  
-  .footer {
-    background-color: #f1f1f1;
-    padding: 10px;
-    text-align: center;
-    width: 100%; /* Make sure the footer takes up the full width of the container */
-    margin-top: auto; /* Push the footer to the bottom */
-    box-sizing: border-box; /* Ensures padding is included within the width */
-  }
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Full height of the viewport */
+}
+
+.example-container {
+  flex: 1; /* Grow the main content as needed */
+  display: flex;
+  flex-direction: column;
+  width: 100%; /* Ensure the content container takes up the full width */
+}
+
+.footer {
+  background-color: #f1f1f1;
+  padding: 10px;
+  text-align: center;
+  width: 100%; /* Make sure the footer takes up the full width of the container */
+  margin-top: auto; /* Push the footer to the bottom */
+  box-sizing: border-box; /* Ensures padding is included within the width */
+}
+.mat-sidenav-content {
+  // overflow: auto;
+  white-space: nowrap;
+  overflow-y: hidden;
+}
 
 // $light-theme: mat.define-theme();
 // $toolbar-theme: mat.define-theme((

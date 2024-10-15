@@ -1,17 +1,34 @@
+<link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" />
+<link
+  href="https://fonts.googleapis.com/css2?family=Arsenal:ital,wght@0,400;0,700;1,400;1,700&display=swap"
+  rel="stylesheet"
+/>
+
 <div class="page-container">
   <mat-sidenav-container class="example-container">
     <mat-sidenav mode="side" opened>
       <div class="sidebar-content">
         <h5 routerLink="/home">Madara Freidenfelde</h5>
-        
-        @for (project of projects; track project)
-        {
-          <div>
-            <a mat-button [routerLink]="['/project', project.folder]" routerLinkActive="active" ariaCurrentWhenActive="page">{{project.title}}</a>
-          </div>
-        }
+
+        <h6>My works</h6>
+        @for (project of projects; track project) {
         <div>
-          <a mat-button routerLink="/contacts" routerLinkActive="active" ariaCurrentWhenActive="page">Contacts</a>
+          <a
+            [routerLink]="['/project', project.folder]"
+            routerLinkActive="active"
+            ariaCurrentWhenActive="page"
+            >{{ project.title }}</a
+          >
+        </div>
+        }
+        <div class="contacts">
+          <a
+            class="contacts"
+            routerLink="/contacts"
+            routerLinkActive="active"
+            ariaCurrentWhenActive="page"
+            >Contacts</a
+          >
         </div>
       </div>
     </mat-sidenav>
@@ -19,6 +36,6 @@
       <router-outlet></router-outlet>
     </mat-sidenav-content>
   </mat-sidenav-container>
-  
+
   <app-footer class="footer"></app-footer>
 </div>
